@@ -4,7 +4,7 @@ from StackCrash.models import History
 
 class HistorySerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
-    date = serializers.DateField('Date visited')
+    date = serializers.DateTimeField()
     url = serializers.CharField(max_length=2048)
     title = serializers.CharField(max_length=1024)
     time = serializers.FloatField()
